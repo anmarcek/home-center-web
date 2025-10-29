@@ -1,5 +1,5 @@
 import {Component, DestroyRef, inject, OnInit} from '@angular/core';
-import {interval, map, of, startWith, switchMap} from "rxjs";
+import {interval, map, startWith, switchMap} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {WeatherService} from "../../services/weather/weather.service";
 import {AsyncPipe, DatePipe, NgIf} from "@angular/common";
