@@ -1,8 +1,47 @@
-.number {
-  color: #fff;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  color: #ffffff;
 }
 
 .clock {
-  font-size: 5rem;
-  color: #fff;
+  font-size: 15rem;
+}
+
+.weather {
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+}
+
+.indoor-air {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.outdoor-air {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wind {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.item {
+  label {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .value {
+    display: block;
+    font-size: 8rem;
+  }
 }

@@ -1,7 +1,51 @@
-<ng-container *ngIf="weather$ | async as weather">
-  <div class="number">{{ weather.indoorAir?.co2 }}</div>
-</ng-container>
+<div class="container">
+  @if (clock$ | async; as clock) {
+    <div class="clock">
+      {{ clock | date:'HH:mm:ss' }}
+    </div>
+  }
 
-<div *ngIf="clock$ | async as clock" class="clock">
-  {{ clock | date:'HH:mm:ss' }}
+  @if (weather$ | async; as weather) {
+    <div class="weather">
+
+      <div class="indoor-air">
+        <div class="item">
+          <label>Temperature</label>
+          <span class="value">{{ weather.indoorAir?.temperature }} °C</span>
+        </div>
+        <div class="item">
+          <label>Humidity</label>
+          <span class="value">{{ weather.indoorAir?.humidity }}%</span>
+        </div>
+        <div class="item">
+          <label>CO₂</label>
+          <span class="value">{{ weather.indoorAir?.co2 }}</span>
+        </div>
+      </div>
+
+      <div class="outdoor-air">
+        <div class="item">
+          <label>Temperature</label>
+          <span class="value">{{ weather.outdoorAir?.temperature }} °C</span>
+        </div>
+        <div class="item">
+          <label>Humidity</label>
+          <span class="value">{{ weather.outdoorAir?.humidity }}%</span>
+        </div>
+      </div>
+
+      <div class="wind">
+        <div class="item">
+          <label>Wind strength</label>
+          <span class="value">{{ weather.wind?.windStrength }}km/h</span>
+        </div>
+        <div class="item">
+          <label>Gust strength</label>
+          <span class="value">{{ weather.wind?.gustStrength }}km/h</span>
+        </div>
+      </div>
+
+    </div>
+  }
+
 </div>
