@@ -1,0 +1,18 @@
+@if(authorizationCodeIsMissing) {
+  <div class="container">
+    <p>
+      Authorization code is missing. Please authorize the application to access your Netatmo account.
+    </p>
+  </div>
+} @else if(this.authorizationFailed) {
+  <div class="container">
+    <p>
+      Authorization failed.
+    </p>
+    <div>
+      <button class="button-glass" (click)="retryAuthorization()">Try again</button>
+    </div>
+  </div>
+}
+
+<ngx-ui-loader ></ngx-ui-loader>

@@ -1,7 +1,1 @@
-<ng-container *ngIf="weather$ | async as weather">
-  <div class="number">{{ weather.indoorAir?.co2 }}</div>
-</ng-container>
-
-<div *ngIf="clock$ | async as clock" class="clock">
-  {{ clock | date:'HH:mm:ss' }}
-</div>
+<router-outlet></router-outlet>
