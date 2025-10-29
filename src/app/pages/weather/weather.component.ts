@@ -2,7 +2,7 @@ import {Component, DestroyRef, inject, OnInit} from '@angular/core';
 import {interval, map, startWith, switchMap} from "rxjs";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 import {WeatherService} from "../../services/weather/weather.service";
-import {AsyncPipe, DatePipe, NgIf} from "@angular/common";
+import {AsyncPipe, DatePipe} from "@angular/common";
 import {NetatmoOAuthService} from "../../services/netatmo-oauth/netatmo-oauth.service";
 
 @Component({
@@ -10,8 +10,7 @@ import {NetatmoOAuthService} from "../../services/netatmo-oauth/netatmo-oauth.se
   standalone: true,
   imports: [
     AsyncPipe,
-    DatePipe,
-    NgIf
+    DatePipe
   ],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.scss'
